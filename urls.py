@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
+#Create 5 urls and views for home, about, services, privacy, blogs using template engine.
 from django.urls import path
 from . import views
 
@@ -26,9 +28,8 @@ from university_mangement import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'home'),
-    path('about-us/', views.aboutUs),
-    path('contact/', views.contact),
-    path('register/', views.register),
-    path('login/', views.login),
+    path('about/', views.about, name = 'about'),
+    path('services/', views.services, name = 'services'),
+    path('privacy/', views.privacy, name = 'privacy'),
+    path('blogs/', views.blogs, name = 'blogs'),
 ]
-
